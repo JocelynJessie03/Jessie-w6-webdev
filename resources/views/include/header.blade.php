@@ -10,10 +10,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="{{ route('home.show') }}">Home Page</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="{{ route('about.show') }}">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('services.show') }}">Our Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('contact.show') }}">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('home.show') ? 'active' : '' }}" href="{{ route('home.show') }}">Home Page</a></li>
+                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('about.show') ? 'active' : '' }}" href="{{ route('about.show') }}">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('services.show') ? 'active' : '' }}" href="{{ route('services.show') }}">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('contact.show') ? 'active' : '' }}" href="{{ route('contact.show') }}">Contact Us</a></li>
                 </ul>
             </div>
         </div>
